@@ -1,193 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ainaz Ebrahimi | Data Portfolio</title>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --bg-accent:#111c34;
+      --card:#1e293b;
+      --card-hover:#24344d;
+      --text:#e2e8f0;
+      --muted:#cbd5e1;
+      --primary:#38bdf8;
+      --secondary:#7dd3fc;
+      --tag:#334155;
+      --border:#475569;
+      --shadow: 0 10px 30px rgba(0,0,0,0.25);
+      --shadow-hover: 0 18px 40px rgba(0,0,0,0.35);
+    }
 
-<title>Ainaz Ebrahimi | Data Portfolio</title>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
 
-<style>
-:root{
-  --bg:#0f172a;
-  --card:#1e293b;
-  --text:#e2e8f0;
-  --muted:#94a3b8;
-  --primary:#38bdf8;
-  --border:#334155;
-}
+    html{
+      scroll-behavior:smooth;
+    }
 
-body{
-  font-family: "Segoe UI", Arial;
-  background:var(--bg);
-  color:var(--text);
-  margin:0;
-  padding:40px 20px;
-}
+    body{
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(125,211,252,0.06), transparent 24%),
+        linear-gradient(180deg, var(--bg-accent) 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height:1.6;
+      padding:32px 20px 48px;
+    }
 
-.container{
-  max-width:950px;
-  margin:auto;
-}
+    .container{
+      max-width: 1040px;
+      margin: 0 auto;
+    }
 
-h1{
-  color:var(--primary);
-  margin-bottom:5px;
-}
+    .hero{
+      margin-bottom: 36px;
+      padding: 28px;
+      border:1px solid rgba(71,85,105,0.6);
+      border-radius:22px;
+      background: linear-gradient(135deg, rgba(30,41,59,0.92), rgba(15,23,42,0.92));
+      box-shadow: var(--shadow);
+    }
 
-h2{
-  margin-top:40px;
-  border-bottom:1px solid var(--border);
-  padding-bottom:8px;
-}
+    h1{
+      color: var(--primary);
+      font-size: 2.6rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
 
-p{
-  color:var(--muted);
-  line-height:1.7;
-}
+    .subtitle{
+      font-size: 1.08rem;
+      color: var(--secondary);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
 
-.tag{
-  background:#1f2937;
-  padding:6px 10px;
-  border-radius:8px;
-  margin:4px;
-  display:inline-block;
-  font-size:13px;
-}
+    .intro{
+      max-width: 860px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
 
-.grid{
-  display:grid;
-  gap:20px;
-}
+    h2{
+      color: var(--secondary);
+      margin: 38px 0 16px;
+      font-size: 1.5rem;
+      border-bottom: 1px solid rgba(71,85,105,0.7);
+      padding-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
 
-@media(min-width:900px){
-  .grid{
-    grid-template-columns:1fr 1fr;
-  }
-}
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 12px;
+    }
 
-.card{
-  background:var(--card);
-  padding:22px;
-  border-radius:16px;
-  border:1px solid var(--border);
-  transition:0.3s;
-}
+    .tag{
+      display:inline-block;
+      background: linear-gradient(180deg, #334155, #293548);
+      color: var(--text);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size: 0.92rem;
+      border:1px solid rgba(71,85,105,0.7);
+    }
 
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.3);
-}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:20px;
+    }
 
-.btn{
-  display:inline-block;
-  margin-top:12px;
-  padding:10px 14px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-  font-size:14px;
-}
+    .card{
+      background: linear-gradient(180deg, rgba(30,41,59,0.98), rgba(24,34,49,0.98));
+      border:1px solid rgba(71,85,105,0.75);
+      border-radius:18px;
+      padding:24px;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
 
-.btn-github{
-  background:#020617;
-  color:#38bdf8;
-  border:1px solid #334155;
-}
+    .card:hover{
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(56,189,248,0.55);
+      background: linear-gradient(180deg, var(--card-hover), rgba(30,41,59,0.98));
+    }
 
-.btn-github:hover{
-  background:#0f172a;
-}
+    .card h3{
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+      line-height: 1.4;
+    }
 
-.footer{
-  margin-top:40px;
-}
-</style>
+    .card p{
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
 
+    .card ul{
+      margin-left: 20px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .card li{
+      margin-bottom: 8px;
+      padding-left: 2px;
+    }
+
+    .links{
+      margin-top: 16px;
+    }
+
+    .links a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color: var(--primary);
+      text-decoration:none;
+      font-weight:600;
+      margin-right:12px;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid rgba(56,189,248,0.25);
+      background: rgba(56,189,248,0.08);
+      transition: all 0.2s ease;
+    }
+
+    .links a:hover{
+      background: rgba(56,189,248,0.16);
+      border-color: rgba(56,189,248,0.45);
+      transform: translateY(-1px);
+      text-decoration:none;
+    }
+
+    .small{
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    @media (min-width: 768px){
+      .grid.two{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 900px){
+      .grid.projects{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px){
+      body{
+        padding:24px 14px 36px;
+      }
+
+      .hero{
+        padding:22px 18px;
+      }
+
+      h1{
+        font-size: 2rem;
+      }
+
+      h2{
+        font-size: 1.3rem;
+      }
+
+      .links a{
+        width:100%;
+        justify-content:center;
+        margin: 0 0 10px 0;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
 
-<div class="container">
+    <section class="hero">
+      <h1>Ainaz Ebrahimi</h1>
+      <p class="subtitle">Junior Data Scientist | Aspiring Data Engineer ⚙️</p>
+      <p class="intro">
+        I’m passionate about building reliable data systems and transforming raw data into meaningful insights.
+        With a background in Data Science and Industrial Engineering, I enjoy working at the intersection of
+        data pipelines, analytics, machine learning, and modern AI systems.
+      </p>
+    </section>
 
-<h1>Ainaz Ebrahimi</h1>
-<p><b>Junior Data Scientist → Aspiring Data Engineer ⚙️</b></p>
+    <section>
+      <h2>🔧 Core Skills</h2>
+      <div class="tags">
+        <span class="tag">Data Pipelines (ETL/ELT)</span>
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Snowflake</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Data Modeling</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Power BI</span>
+      </div>
+    </section>
 
-<p>
-LLMs are powerful — but they are only as good as the data pipelines behind them.
-<br><br>
-Through my projects, I’ve developed a strong interest in Data Engineering, especially in how data is ingested, transformed, and structured before it reaches analytics or AI systems.
-<br><br>
-I enjoy building reliable pipelines, working with structured data, and designing workflows that make data actually usable — not just available.
-</p>
+    <section>
+      <h2>💻 Technical Toolkit</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Programming & Data Tools</h3>
+          <ul>
+            <li>Python (NumPy, Pandas, Scikit-learn)</li>
+            <li>SQL</li>
+            <li>PySpark</li>
+            <li>Snowflake</li>
+            <li>AWS S3 / MySQL / Flask / FastAPI</li>
+            <li>Docker, GitHub Actions, CI/CD</li>
+            <li>Power BI, Streamlit</li>
+          </ul>
+        </div>
 
-<h2>🔧 Core Skills</h2>
+        <div class="card">
+          <h3>Machine Learning & Analytics</h3>
+          <ul>
+            <li>Regression</li>
+            <li>Classification</li>
+            <li>Clustering</li>
+            <li>Time Series Forecasting</li>
+            <li>Recommendation Systems</li>
+            <li>Feature Engineering</li>
+            <li>Statistical Analysis & KPI Design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<div>
-<span class="tag">Python (Pandas, NumPy, Scikit-learn)</span>
-<span class="tag">SQL</span>
-<span class="tag">PySpark</span>
-<span class="tag">Snowflake</span>
-<span class="tag">AWS</span>
-<span class="tag">ETL / ELT Pipelines</span>
-<span class="tag">Machine Learning</span>
-<span class="tag">CI/CD</span>
-<span class="tag">Docker</span>
-</div>
+    <section>
+      <h2>🚀 Featured Projects</h2>
+      <div class="grid projects">
+        <div class="card">
+          <h3>📦 Supply Chain Data Pipeline</h3>
+          <p>
+            Designed and implemented a scalable end-to-end batch data pipeline using PySpark, AWS S3, MySQL, and Flask.
+            The project processed 5M+ supply chain records and transformed raw data into analytics-ready datasets.
+          </p>
+          <ul>
+            <li>Built ETL workflows for cleaning, transformation, and aggregation</li>
+            <li>Computed key KPIs such as inventory turnover, order fulfillment rate, and lead time</li>
+            <li>Exposed processed data through REST APIs for downstream analytics and reporting</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/ainazeb/supply-chain-data-pipeline" target="_blank" rel="noopener noreferrer">🔗 View on GitHub</a>
+          </p>
+        </div>
 
-<h2>🚀 Featured Projects</h2>
+        <div class="card">
+          <h3>🛒 Retail Analytics & Forecasting Pipeline</h3>
+          <p>
+            Built a full ELT pipeline in Snowflake (RAW → STAGING → MART) for retail transaction data,
+            combining data engineering and machine learning for business insights.
+          </p>
+          <ul>
+            <li>Implemented data cleaning, feature engineering, and customer segmentation (RFM + KMeans)</li>
+            <li>Developed time-series sales forecasting using SARIMA</li>
+            <li>Integrated outputs into Snowflake and visualized results in Power BI dashboards</li>
+            <li>Used FastAPI, Docker, and GitHub Actions for deployment and CI/CD</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/ainazeb/retail-ml-pipeline-project" target="_blank" rel="noopener noreferrer">🔗 View on GitHub</a>
+          </p>
+        </div>
 
-<div class="grid">
+        <div class="card">
+          <h3>📄 Snowflake Data Pipeline & Streamlit App</h3>
+          <p>
+            Designed a layered Snowflake data pipeline to transform consumer complaints data into structured,
+            analytics-ready datasets and delivered insights through an interactive Streamlit app.
+          </p>
+          <ul>
+            <li>Built SQL transformations and aggregated key metrics</li>
+            <li>Created a clean data flow from RAW to MART layers</li>
+            <li>Enabled filtered exploration and decision support via Streamlit</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/ainazeb/dcwp-snowflake" target="_blank" rel="noopener noreferrer">🔗 View on GitHub</a>
+          </p>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>📦 Supply Chain Data Pipeline</h3>
-<p>
-End-to-end data pipeline using PySpark, AWS S3, and MySQL to process large-scale supply chain data and generate KPIs.
-</p>
-<a class="btn btn-github" href="https://github.com/ainazeb/supply-chain-data-pipeline" target="_blank">
-🔗 View on GitHub
-</a>
-</div>
+    <section>
+      <h2>🎓 Thesis & Research</h2>
+      <div class="card">
+        <h3>M.S. Thesis in Data Science – Tampere University</h3>
+        <p>
+          My thesis focused on optimizing recommendation models for dynamic user preferences in time-aware systems.
+          I worked on machine learning-based recommendation methods that captured how user interests evolve over time.
+        </p>
+        <ul>
+          <li>Designed time-aware collaborative filtering models</li>
+          <li>Developed recommendation approaches using dynamic attenuation and similarity metrics</li>
+          <li>Evaluated performance on real datasets such as Amazon and MovieLens</li>
+          <li>Improved recommendation accuracy compared to baseline approaches</li>
+        </ul>
+        <p class="small">
+          Thesis topic: Optimizing Time Correlation Coefficient Models for Dynamic User Preferences in Time-Aware Recommendation Systems
+        </p>
+      </div>
+    </section>
 
-<div class="card">
-<h3>🛒 Retail ML & Data Pipeline</h3>
-<p>
-Snowflake-based ELT pipeline combined with machine learning for customer segmentation and forecasting.
-</p>
-<a class="btn btn-github" href="https://github.com/ainazeb/retail-ml-pipeline-project" target="_blank">
-🔗 View on GitHub
-</a>
-</div>
+    <section>
+      <h2>📈 What I’m Focused On</h2>
+      <div class="card">
+        <p>
+          I’m currently focused on deepening my skills in Data Engineering and building production-ready data workflows.
+          I’m especially interested in reliable pipelines, data quality, cloud-based platforms, and how data infrastructure
+          supports machine learning and modern AI applications.
+        </p>
+      </div>
+    </section>
 
-<div class="card">
-<h3>❄️ Snowflake Data Pipeline</h3>
-<p>
-Structured data pipeline (RAW → STAGING → MART) designed for analytics-ready datasets and reporting.
-</p>
-<a class="btn btn-github" href="https://github.com/ainazeb/dcwp-snowflake" target="_blank">
-🔗 View on GitHub
-</a>
-</div>
+    <section>
+      <h2>🤝 Let’s Connect</h2>
+      <div class="card links">
+        <a href="https://github.com/ainazeb" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/ainaz-ebrahimi-data-science/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:ainaz.ebrahimi1365@gmail.com">Email</a>
+      </div>
+    </section>
 
-<div class="card">
-<h3>🎓 Recommendation System (Thesis)</h3>
-<p>
-Machine learning-based recommendation system focused on time-aware user behavior and dynamic preferences.
-</p>
-<a class="btn btn-github" href="https://github.com/ainazeb/recommendation-system" target="_blank">
-🔗 View on GitHub
-</a>
-</div>
-
-</div>
-
-<h2>🤝 Connect</h2>
-
-<div class="footer">
-<a href="https://github.com/ainazeb" target="_blank">GitHub</a> |
-<a href="https://www.linkedin.com/in/ainaz-ebrahimi-data-science/" target="_blank">LinkedIn</a>
-</div>
-
-</div>
-
+  </div>
 </body>
 </html>
