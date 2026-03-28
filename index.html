@@ -1,215 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ainaz Ebrahimi | Data Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root{
-      --bg:#0f172a;
-      --card:#1e293b;
-      --text:#e2e8f0;
-      --muted:#cbd5e1;
-      --primary:#38bdf8;
-      --secondary:#7dd3fc;
-      --border:#334155;
-    }
+<title>Ainaz Ebrahimi | Data Portfolio</title>
 
-    body{
-      font-family: "Segoe UI", Arial;
-      background: var(--bg);
-      color: var(--text);
-      margin:0;
-      padding:30px;
-    }
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#1e293b;
+  --text:#e2e8f0;
+  --muted:#94a3b8;
+  --primary:#38bdf8;
+  --border:#334155;
+}
 
-    .container{
-      max-width:1000px;
-      margin:auto;
-    }
+body{
+  font-family: "Segoe UI", Arial;
+  background:var(--bg);
+  color:var(--text);
+  margin:0;
+  padding:40px 20px;
+}
 
-    h1{
-      color:var(--primary);
-      margin-bottom:5px;
-    }
+.container{
+  max-width:950px;
+  margin:auto;
+}
 
-    h2{
-      color:var(--secondary);
-      margin-top:40px;
-      border-bottom:1px solid var(--border);
-      padding-bottom:8px;
-    }
+h1{
+  color:var(--primary);
+  margin-bottom:5px;
+}
 
-    p{
-      color:var(--muted);
-      line-height:1.6;
-    }
+h2{
+  margin-top:40px;
+  border-bottom:1px solid var(--border);
+  padding-bottom:8px;
+}
 
-    .grid{
-      display:grid;
-      gap:20px;
-    }
+p{
+  color:var(--muted);
+  line-height:1.7;
+}
 
-    @media (min-width:900px){
-      .grid{
-        grid-template-columns:1fr 1fr;
-      }
-    }
+.tag{
+  background:#1f2937;
+  padding:6px 10px;
+  border-radius:8px;
+  margin:4px;
+  display:inline-block;
+  font-size:13px;
+}
 
-    .card{
-      background:var(--card);
-      padding:22px;
-      border-radius:16px;
-      border:1px solid var(--border);
-      transition:0.3s;
-    }
+.grid{
+  display:grid;
+  gap:20px;
+}
 
-    .card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 12px 25px rgba(0,0,0,0.3);
-      border-color:var(--primary);
-    }
+@media(min-width:900px){
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
 
-    .buttons{
-      margin-top:12px;
-    }
+.card{
+  background:var(--card);
+  padding:22px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  transition:0.3s;
+}
 
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:10px;
-      margin-right:10px;
-      text-decoration:none;
-      font-size:14px;
-      font-weight:600;
-    }
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.3);
+}
 
-    .btn-primary{
-      background:#0b2942;
-      color:var(--primary);
-    }
+.btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+}
 
-    .btn-secondary{
-      background:#1f2937;
-      color:#94a3b8;
-    }
+.btn-github{
+  background:#020617;
+  color:#38bdf8;
+  border:1px solid #334155;
+}
 
-    .btn:hover{
-      opacity:0.9;
-    }
+.btn-github:hover{
+  background:#0f172a;
+}
 
-    .tag{
-      display:inline-block;
-      background:#334155;
-      padding:6px 10px;
-      border-radius:8px;
-      margin:4px;
-      font-size:13px;
-    }
+.footer{
+  margin-top:40px;
+}
+</style>
 
-    .footer{
-      margin-top:40px;
-    }
-
-    a{
-      color:var(--primary);
-      text-decoration:none;
-    }
-
-  </style>
 </head>
 
 <body>
 
 <div class="container">
 
-  <h1>Ainaz Ebrahimi</h1>
-  <p><b>Junior Data Scientist → Aspiring Data Engineer ⚙️</b></p>
+<h1>Ainaz Ebrahimi</h1>
+<p><b>Junior Data Scientist → Aspiring Data Engineer ⚙️</b></p>
 
-  <p>
-    I’m passionate about building reliable data systems and transforming raw data into meaningful insights.
-    I focus on data pipelines, analytics, and how data infrastructure supports modern AI systems such as LLMs.
-  </p>
+<p>
+LLMs are powerful — but they are only as good as the data pipelines behind them.
+<br><br>
+Through my projects, I’ve developed a strong interest in Data Engineering, especially in how data is ingested, transformed, and structured before it reaches analytics or AI systems.
+<br><br>
+I enjoy building reliable pipelines, working with structured data, and designing workflows that make data actually usable — not just available.
+</p>
 
-  <h2>🔧 Core Skills</h2>
+<h2>🔧 Core Skills</h2>
 
-  <div>
-    <span class="tag">Python (NumPy, Pandas, Scikit-learn)</span>
-    <span class="tag">SQL</span>
-    <span class="tag">PySpark</span>
-    <span class="tag">Snowflake</span>
-    <span class="tag">AWS</span>
-    <span class="tag">Data Pipelines (ETL/ELT)</span>
-    <span class="tag">Machine Learning</span>
-    <span class="tag">CI/CD</span>
-    <span class="tag">Docker</span>
-    <span class="tag">Power BI</span>
-  </div>
+<div>
+<span class="tag">Python (Pandas, NumPy, Scikit-learn)</span>
+<span class="tag">SQL</span>
+<span class="tag">PySpark</span>
+<span class="tag">Snowflake</span>
+<span class="tag">AWS</span>
+<span class="tag">ETL / ELT Pipelines</span>
+<span class="tag">Machine Learning</span>
+<span class="tag">CI/CD</span>
+<span class="tag">Docker</span>
+</div>
 
-  <h2>🚀 Featured Projects</h2>
+<h2>🚀 Featured Projects</h2>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <h3>📦 Supply Chain Data Pipeline</h3>
-      <p>
-        Built an end-to-end data pipeline using PySpark, AWS S3, and MySQL to process large-scale supply chain data.
-      </p>
-      <div class="buttons">
-        <a class="btn btn-primary" href="https://github.com/ainazeb/supply-chain-data-pipeline" target="_blank">View Project</a>
-        <a class="btn btn-secondary" href="https://github.com/ainazeb/supply-chain-data-pipeline" target="_blank">Code</a>
-      </div>
-    </div>
+<div class="card">
+<h3>📦 Supply Chain Data Pipeline</h3>
+<p>
+End-to-end data pipeline using PySpark, AWS S3, and MySQL to process large-scale supply chain data and generate KPIs.
+</p>
+<a class="btn btn-github" href="https://github.com/ainazeb/supply-chain-data-pipeline" target="_blank">
+🔗 View on GitHub
+</a>
+</div>
 
-    <div class="card">
-      <h3>🛒 Retail Analytics & Forecasting</h3>
-      <p>
-        Designed a Snowflake ELT pipeline and applied machine learning for customer segmentation and forecasting.
-      </p>
-      <div class="buttons">
-        <a class="btn btn-primary" href="https://github.com/ainazeb/retail-ml-pipeline-project" target="_blank">View Project</a>
-        <a class="btn btn-secondary" href="https://github.com/ainazeb/retail-ml-pipeline-project" target="_blank">Code</a>
-      </div>
-    </div>
+<div class="card">
+<h3>🛒 Retail ML & Data Pipeline</h3>
+<p>
+Snowflake-based ELT pipeline combined with machine learning for customer segmentation and forecasting.
+</p>
+<a class="btn btn-github" href="https://github.com/ainazeb/retail-ml-pipeline-project" target="_blank">
+🔗 View on GitHub
+</a>
+</div>
 
-    <div class="card">
-      <h3>❄️ Snowflake Data Pipeline</h3>
-      <p>
-        Built a layered data pipeline (RAW → STAGING → MART) to transform raw data into analytics-ready datasets.
-      </p>
-      <div class="buttons">
-        <a class="btn btn-primary" href="https://github.com/ainazeb/dcwp-snowflake" target="_blank">View Project</a>
-        <a class="btn btn-secondary" href="https://github.com/ainazeb/dcwp-snowflake" target="_blank">Code</a>
-      </div>
-    </div>
+<div class="card">
+<h3>❄️ Snowflake Data Pipeline</h3>
+<p>
+Structured data pipeline (RAW → STAGING → MART) designed for analytics-ready datasets and reporting.
+</p>
+<a class="btn btn-github" href="https://github.com/ainazeb/dcwp-snowflake" target="_blank">
+🔗 View on GitHub
+</a>
+</div>
 
-    <div class="card">
-      <h3>🎓 Recommendation System (Thesis)</h3>
-      <p>
-        Developed machine learning-based recommendation systems focused on time-aware user preferences and dynamic behavior.
-      </p>
-      <div class="buttons">
-        <a class="btn btn-primary" href="https://github.com/ainazeb/recommendation-system" target="_blank">View Project</a>
-        <a class="btn btn-secondary" href="https://github.com/ainazeb/recommendation-system" target="_blank">Code</a>
-      </div>
-    </div>
+<div class="card">
+<h3>🎓 Recommendation System (Thesis)</h3>
+<p>
+Machine learning-based recommendation system focused on time-aware user behavior and dynamic preferences.
+</p>
+<a class="btn btn-github" href="https://github.com/ainazeb/recommendation-system" target="_blank">
+🔗 View on GitHub
+</a>
+</div>
 
-  </div>
+</div>
 
-  <h2>🎓 Thesis</h2>
+<h2>🤝 Connect</h2>
 
-  <p>
-    M.S. Thesis at Tampere University focused on optimizing recommendation systems using time-aware modeling
-    and dynamic user behavior analysis across datasets like Amazon and MovieLens.
-  </p>
-
-  <h2>🤝 Connect</h2>
-
-  <div class="footer">
-    <a href="https://github.com/ainazeb" target="_blank">GitHub</a> |
-    <a href="https://www.linkedin.com/in/ainaz-ebrahimi-data-science/" target="_blank">LinkedIn</a>
-  </div>
+<div class="footer">
+<a href="https://github.com/ainazeb" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/ainaz-ebrahimi-data-science/" target="_blank">LinkedIn</a>
+</div>
 
 </div>
 
